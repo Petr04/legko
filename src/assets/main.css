@@ -1,0 +1,20 @@
+body {
+  font-size: 17px;
+}
+
+* {
+  font-family: Jost;
+}
+
+h2.badge {
+  border-radius: 100vh;
+  padding: .5em 1em;
+  background: #7a85e5;
+  font-size: 1.3em;
+  /*margin-bottom: 1.5em;*/
+}
+
+.h-container {
+  display: flex;
+  align-items: center;
+}
