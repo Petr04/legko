@@ -2,16 +2,20 @@
   <v-app>
     <v-app-bar
       app
+      flat
+      color="white"
     >
-      <v-app-bar-title>
-        <h3 class="text-h4">Легко</h3>
-      </v-app-bar-title>
+      <v-toolbar-title>
+        Легко
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
+<!--
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
+ -->
     </v-app-bar>
     <v-main>
       <router-view />
@@ -21,6 +25,14 @@
 
 <style>
 @import "@/assets/main.css";
+
+.v-main {
+  margin-top: 20px;
+}
+
+.v-main > * {
+  margin: 0 15px;
+}
 </style>
 
 <script>

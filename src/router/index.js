@@ -3,14 +3,14 @@ import VueRouter from 'vue-router'
 import VueMeta from 'vue-meta'
 
 import WiFi from '@/views/WiFi.vue'
-import Menu from '@/views/Main-Menu.vue'
+import MainMenu from '@/views/MainMenu.vue'
 
 Vue.use(VueRouter)
 Vue.use(VueMeta)
 
 const routes = [
   { path: '/wi-fi', component: WiFi },
-  { path: '/menu', component: Menu}
+  { path: '/menu', component: MainMenu },
 ]
 
 const router = new VueRouter({
