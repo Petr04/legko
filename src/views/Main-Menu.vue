@@ -6,30 +6,41 @@
     </div>
 
     <div class="apps">
+      <router-link to="/telegram">
         <div class="app">
-          <img src="@/assets/icons/telegram_icon-icons.com_53603.png" alt="" width="70">
+          <img src="@/assets/icons/telegram.png" alt="" width="70">
           <p>
             Telegram
           </p>
         </div>
+      </router-link>
+      
+      <router-link to="/whatsapp">
         <div class="app">
-          <img src="@/assets/icons/telegram_icon-icons.com_53603.png" alt="" width="70">
+          <img src="@/assets/icons/whatsapp.png" alt="" width="70">
           <p>
             WhatsApp
           </p>
         </div>
+      </router-link>
+
+      <router-link to="/vk">
         <div class="app">
-          <img src="@/assets/icons/telegram_icon-icons.com_53603.png" alt="" width="70">
+          <img src="@/assets/icons/vk.png" alt="" width="70">
           <p>
             VK
           </p>
         </div>
+      </router-link>
+
+      <router-link to="/settings">
         <div class="app">
-          <img src="@/assets/icons/telegram_icon-icons.com_53603.png" alt="" width="70">
+          <img src="@/assets/icons/settings.png" alt="" width="70">
           <p>
             Настройки
           </p>
         </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -47,17 +58,19 @@ export default {
   align-items: center;
   flex-direction: column;
   font-size: larger;
-  margin-top: 10px;
+  margin-top: 70px;
   font-weight: bold;
 }
 .apps {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 50px;
   column-gap: 20px;
 }
-.app {
-  /* margin: 10px; */
+
+a {
+  color: #000 !important;
+  text-decoration: none
 }
 </style>
