@@ -31,7 +31,7 @@
 }
 
 .v-main > * {
-  margin: 0 15px;
+  /* margin: 0 15px; */
 }
 </style>
 
