@@ -5,9 +5,13 @@
       flat
       color="white"
     >
-      <v-toolbar-title>
-        Легко
-      </v-toolbar-title>
+      <v-app-bar-title style="
+        display: flex;
+        align-items: center;
+      ">
+        <img src="@/assets/logo-text-letter-overlay.svg" width="60"
+        >
+      </v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -32,6 +36,11 @@
 
 .v-main > * {
   margin: 0 15px;
+}
+
+.v-app-bar-title > * {
+  display: flex;
+  align-items: center;
 }
 </style>
 
