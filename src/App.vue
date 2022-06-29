@@ -5,12 +5,8 @@
       flat
       color="white"
     >
-      <v-app-bar-title style="
-        display: flex;
-        align-items: center;
-      ">
-        <img src="@/assets/logo-text-letter-overlay.svg" width="60"
-        >
+      <v-app-bar-title>
+        <img src="@/assets/logo-text-letter-overlay.svg" width="60">
       </v-app-bar-title>
 
       <v-spacer></v-spacer>

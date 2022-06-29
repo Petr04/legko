@@ -45,7 +45,7 @@
 
 <style scoped>
 .header {
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: 500;
 }
 
@@ -63,7 +63,15 @@
   grid-template-columns: repeat(auto-fit, 70px);
   justify-content: center;
   margin-top: 40px;
-  column-gap: 20px;
+  column-gap: 30px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  font-size: .9em;
 }
 
 .app img {
