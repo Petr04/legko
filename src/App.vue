@@ -30,8 +30,13 @@
 <style>
 @import "@/assets/main.css";
 
+body {
+  font-size: 22px;
+}
+
 .v-main {
-  margin-top: 20px;
+  max-width: 450px !important;
+  margin: 20px auto;
 }
 
 .v-main > * {
