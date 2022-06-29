@@ -9,6 +9,10 @@ Vue.use(VueRouter)
 Vue.use(VueMeta)
 
 const routes = [
+  { path: '', component: MainMenu },
+  { path: '/', component: MainMenu },
+  { path: '/index.html', component: MainMenu },
+
   { path: '/wi-fi', component: WiFi },
   { path: '/menu', component: MainMenu },
 ]

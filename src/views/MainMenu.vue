@@ -33,7 +33,7 @@
         </div>
       </router-link>
 
-      <router-link to="/settings">
+      <router-link to="/wi-fi"> <!-- Поменять -->
         <div class="app">
           <img src="@/assets/icons/settings.png">
           <p>Настройки</p>
