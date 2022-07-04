@@ -17,7 +17,7 @@
     .containerQue{
         width: 95%;
         height: fit-content;
-        position: absolute;
+        position: relative;
     }
     .queBlock{
         background-color: rgba(217, 217, 217, 1);
@@ -29,6 +29,7 @@
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
         height: fit-content;
+        margin-top: 10px;
     }
     .queBlock img{
         height: 30px;
