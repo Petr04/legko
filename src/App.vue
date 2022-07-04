@@ -17,7 +17,7 @@
       </v-btn>
  -->
     </v-app-bar>
-    <v-main>
+    <v-main :class="{ menu: menuOpened }">
       <router-view />
     </v-main>
   </v-app>
@@ -35,8 +35,12 @@ body {
   margin: 20px auto;
 }
 
-.v-main > * {
-  margin: 0 15px;
+.v-main.menu {
+  margin-bottom: 0;
+}
+
+.v-main:not(.menu) > * {
+   margin: 0 15px; 
 }
 
 .v-app-bar-title > * {
@@ -48,12 +52,15 @@ body {
 <script>
 export default {
   name: 'App',
-
   components: {
   },
-
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      menuOpened: ['', '/', '/index.html'].includes(this.$route.path),
+    };
+  },
+  mounted() {
+    console.log(this.$route);
+  }
 };
 </script>
