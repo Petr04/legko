@@ -33,6 +33,7 @@ body {
 .v-main {
   max-width: 450px !important;
   margin: 20px auto;
+  transition: 0s !important;
 }
 
 .v-main.menu {
@@ -56,8 +57,13 @@ export default {
   },
   data() {
     return {
-      menuOpened: ['', '/', '/index.html'].includes(this.$route.path),
+      menuOpened: true,
     };
+  },
+  watch: {
+    $route(r) {
+      this.menuOpened = ['', '/', '/index.html'].includes(r.path);
+    },
   },
   mounted() {
     console.log(this.$route);
