@@ -5,12 +5,12 @@
       <img src="@/assets/wifi.svg">
       <h2 style="font-weight: 500">Wi-Fi</h2>
     </div>
-    <!-- TODO: увеличить размер текста (проконсультироваться со всеми) -->
+    <network-warning
+      v-if="wifiRequired && isPingSuccessful != null && !isPingSuccessful"
+    />
     <big-numbers-list
       color="#7a85e5"
     >
-      <!-- TODO: Поменять надписи под Android и добавить изображения -->
-      <!-- Можно потом сделать 2 списка инструкций для Android и iOS -->
       <big-numbers-li title="Зайдите в настройки">
         <img src="@/assets/image1.png">
         <p>
@@ -18,19 +18,20 @@
         </p>
       </big-numbers-li>
       <big-numbers-li title="Найдите надпись Wi-Fi и нажмите на неё">
-        <!-- TODO: Вставить изображение -->
       </big-numbers-li>
       <big-numbers-li title="Нажмите на ползунок">
-        <!-- TODO: Вставить изображение -->
       </big-numbers-li>
       <big-numbers-li title="Найдите название вашей сети">
-        <!-- TODO: Вставить изображение -->
       </big-numbers-li>
     </big-numbers-list>
   </div>
 </template>
 
 <style scoped>
+.wifi-warning {
+  /*background: red;*/
+}
+
 .wifi-container {
   display: flex;
   flex-direction: column;
@@ -42,11 +43,27 @@
 <script>
 import BigNumbersList from '@/components/BigNumbersList.vue';
 import BigNumbersLi from '@/components/BigNumbersLi.vue';
+import NetworkWarning from '@/components/NetworkWarning.vue';
+import { ping } from '@/lib/network.js';
 
 export default {
   components: {
     BigNumbersList,
     BigNumbersLi,
+    NetworkWarning,
+  },
+  data: () => ({
+    wifiRequired: true, // just for test
+    isPingSuccessful: null,
+  }),
+  methods: {
+    updatePingStatus() {
+      ping().then(val => this.isPingSuccessful = val);
+    },
+  },
+  mounted() {
+    this.updatePingStatus();
+    setInterval(this.updatePingStatus, 1000);
   },
 };
 </script>

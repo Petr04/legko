@@ -18,6 +18,7 @@
     "cordova-electron": "~3.1.0",
     "cordova-ios": "~6.2.0",
     "cordova-osx": "~6.0.0",
+    "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-splashscreen": "github:goinnn/cordova-plugin-splashscreen#4.0.0#colors",
     "cordova-plugin-statusbar": "^3.0.0"
   },
@@ -31,7 +32,8 @@
     ],
     "plugins": {
       "cordova-plugin-statusbar": {},
-      "cordova-plugin-splashscreen": {}
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-network-information": {}
     }
   }
 }

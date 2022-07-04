@@ -1,5 +1,5 @@
 <template>
-  <ol ref="ol">
+  <ol class="big-numbers-list" ref="ol">
     <slot />
   </ol>
 </template>
