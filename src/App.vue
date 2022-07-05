@@ -33,10 +33,17 @@ body {
 }
 
 .gradient.menu {
-  background: radial-gradient(circle at bottom, rgba(255,255,255,1) 0%, rgba(0,0,255,0.3) 73%, rgba(255,255,255,0) 0%);
+  background: radial-gradient(circle at bottom, rgba(255,255,255,1) 0%, rgba(0,0,255,0.3) 70%, rgba(255,255,255,0) 70.3%);
   background-size: 100vw;
   background-attachment: fixed;
   height: 100%;
+}
+@media  screen and (min-width: 1024px) {
+ 
+    .gradient.menu{
+      background: radial-gradient(circle at 50% 160%, rgba(255,255,255,1) 0%, rgba(0,0,255,0.3) 70%, rgba(255,255,255,0) 70.3%);
+    }
+  
 }
 
 .v-main {
