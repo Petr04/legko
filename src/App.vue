@@ -17,9 +17,11 @@
       </v-btn>
  -->
     </v-app-bar>
-    <v-main :class="{ menu: menuOpened }">
-      <router-view />
-    </v-main>
+    <div class="gradient" :class="{ menu: menuOpened }">
+      <v-main :class="{ menu: menuOpened }">
+        <router-view />
+      </v-main>
+    </div>
   </v-app>
 </template>
 
@@ -30,18 +32,20 @@ body {
   font-size: 22px;
 }
 
+.gradient.menu {
+  background: radial-gradient(circle at bottom, rgba(255,255,255,1) 0%, rgba(0,0,255,0.3) 73%, rgba(255,255,255,0) 0%);
+  background-size: 100vw;
+  background-attachment: fixed;
+  height: 100%;
+}
+
 .v-main {
   max-width: 450px !important;
   margin: 20px auto;
-  transition: 0s !important;
 }
 
-.v-main.menu {
-  margin-bottom: 0;
-}
-
-.v-main:not(.menu) > * {
-   margin: 0 15px; 
+.v-main > * {
+  margin: 0 15px;
 }
 
 .v-app-bar-title > * {
@@ -65,8 +69,5 @@ export default {
       this.menuOpened = ['', '/', '/index.html'].includes(r.path);
     },
   },
-  mounted() {
-    console.log(this.$route);
-  }
 };
 </script>

@@ -58,9 +58,6 @@
   text-align: center;
   flex-direction: column;
   font-size: 1em;
-  background: radial-gradient(circle at bottom, rgba(255,255,255,1) 0%, rgba(0,0,255,0.3) 73%, rgba(255,255,255,0) 0%);
-  background-size: 100vw;
-  background-attachment: fixed;
 }
 
 .apps-container {
