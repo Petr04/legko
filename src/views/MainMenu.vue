@@ -9,31 +9,14 @@
 
     <div class="apps-container">
       <div class="apps">
-        <router-link to="/telegram">
+        <router-link
+          v-for="article in articles"
+          :key="article.id"
+          to="/wi-fi"
+        >
           <div class="app">
-            <img src="@/assets/icons/telegram.png">
-            <p>Telegram</p>
-          </div>
-        </router-link>
-        
-        <router-link to="/whatsapp">
-          <div class="app">
-            <img src="@/assets/icons/whatsapp.png">
-            <p>WhatsApp</p>
-          </div>
-        </router-link>
-
-        <router-link to="/vk">
-          <div class="app">
-            <img src="@/assets/icons/vk.png">
-            <p>ВКонтакте</p>
-          </div>
-        </router-link>
-
-        <router-link to="/wi-fi"> <!-- Поменять -->
-          <div class="app">
-            <img src="@/assets/icons/settings.png">
-            <p>Настройки</p>
+            <img :src="'data:image/png;base64, ' + article.icon">
+            <p>{{ article.title }}</p>
           </div>
         </router-link>
       </div>
@@ -90,3 +73,16 @@ a {
   text-decoration: none
 }
 </style>
+
+<script>
+import { mapState } from 'vuex';
+
+export default {
+  // computed: mapState(['articles']),
+  computed: {
+    ...mapState([
+      'articles',
+    ]),
+  },
+};
+</script>

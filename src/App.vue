@@ -79,6 +79,9 @@ export default {
       menuOpened: true,
     };
   },
+  mounted() { // Заменить на created()?
+    this.$store.dispatch('updateArticles');
+  },
   watch: {
     $route(r) {
       this.menuOpened = ['', '/', '/index.html'].includes(r.path);

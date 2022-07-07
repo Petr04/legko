@@ -24,13 +24,15 @@
     "cordova-serve-osx": "cross-env CORDOVA_PLATFORM=osx vue-cli-service cordova-serve-osx"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "cordova": "^11.0.0",
     "core-js": "^3.8.3",
     "ping.js": "^0.3.0",
     "vue": "^2.6.14",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.5.4",
-    "vuetify": "^2.6.0"
+    "vuetify": "^2.6.0",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
