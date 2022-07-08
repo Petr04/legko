@@ -14,8 +14,8 @@ const routes = [
   { path: '/', component: MainMenu },
   { path: '/index.html', component: MainMenu },
 
-  { path: '/group/:id', name: 'group', component: Group },
-  { path: '/article/:id', name: 'article', component: Article },
+  { path: '/group/:id/:title/:icon/:color/:wifi', name: 'group', component: Group },
+  { path: '/article/:id/:title/:wifi/:color/:groupTitle/:icon', name: 'article', component: Article },
 ]
 
 const router = new VueRouter({

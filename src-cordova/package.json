@@ -20,7 +20,8 @@
     "cordova-osx": "~6.0.0",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-splashscreen": "github:goinnn/cordova-plugin-splashscreen#4.0.0#colors",
-    "cordova-plugin-statusbar": "^3.0.0"
+    "cordova-plugin-statusbar": "^3.0.0",
+    "cordova-sqlite-storage": "github:litehelpers/Cordova-sqlite-storage"
   },
   "cordova": {
     "platforms": [
@@ -33,7 +34,11 @@
     "plugins": {
       "cordova-plugin-statusbar": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-network-information": {}
+      "cordova-plugin-network-information": {},
+      "cordova-sqlite-storage": {}
     }
+  },
+  "dependencies": {
+    "localforage-cordovasqlitedriver": "^1.8.0"
   }
 }
