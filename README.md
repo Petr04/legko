@@ -5,34 +5,21 @@
 npm ci
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-## Cordova
-
-### Build
+## Build
 ```
 npm run cordova-prepare
+cd src-cordova
+cordova build android
 ```
+Output file will be at `src-cordova/platforms/android/app/build/outputs/apk/debug/app-debug.apk`
 
-### Run on Android device
+## Run on Android device
 1. Connect your device to computer
 2. Ensure that developer mode is on
 3. Run
 ```
-cd src_cordova
+npm run cordova-prepare
+cd src-cordova
 cordova run android --device
 ```
 
