@@ -1,5 +1,8 @@
 <template>
-  <div class="wifi-warning">
+  <div
+    v-if="!pingSuccessful && pingSuccessful != null"
+    class="wifi-warning"
+  >
     <span>Чтобы воспользоваться этим приложением, необходимо
     подключиться к интернету</span>
     <div class="button">
@@ -16,8 +19,6 @@
   border-radius: 30px;
   padding: 25px;
   margin: 0 15px;
-  margin-top: 10px;
-  margin-bottom: 25px;
 }
 
 .button {
@@ -25,3 +26,22 @@
   padding: .3em .4em;
 }
 </style>
+
+<script>
+import { ping } from '@/lib/network.js';
+
+export default {
+  data: () => ({
+    pingSuccessful: null,
+  }),
+  methods: {
+    updatePingStatus() {
+      ping().then(val => this.pingSuccessful = val);
+    },
+  },
+  mounted() {
+    this.updatePingStatus();
+    setInterval(this.updatePingStatus, 1000);
+  },
+};
+</script>

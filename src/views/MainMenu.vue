@@ -9,16 +9,21 @@
 
     <div class="apps-container">
       <div class="apps">
-        <router-link
-          v-for="article in articles"
-          :key="article.id"
-          to="/wi-fi"
+        <a
+          v-for="group in groups"
+          :key="group.id"
         >
-          <div class="app">
-            <img :src="'data:image/png;base64, ' + article.icon">
-            <p>{{ article.title }}</p>
+          <div
+            @click="$router.push({
+              name: 'group',
+              params: group,
+            })"
+            class="app"
+          >
+            <img :src="'data:image/png;base64, ' + group.icon">
+            <p>{{ group.title }}</p>
           </div>
-        </router-link>
+        </a>
       </div>
     </div>
   </div>
@@ -78,11 +83,8 @@ a {
 import { mapState } from 'vuex';
 
 export default {
-  // computed: mapState(['articles']),
   computed: {
-    ...mapState([
-      'articles',
-    ]),
+    ...mapState(['groups']),
   },
 };
 </script>

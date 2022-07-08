@@ -7,20 +7,20 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state() {
     return {
-      articles: [],
+      groups: [],
     };
   },
   mutations: {
-    updateArticles(state, newValue) {
-      state.articles = newValue;
+    updateGroups(state, newValue) {
+      state.groups = newValue;
     },
   },
   actions: {
-    updateArticles(context) {
-      axios.get('articles')
+    updateGroups(context) {
+      axios.get('groups')
         .then(response => {
-          context.commit('updateArticles', response.data);
-        }).catch(console.error);
+          context.commit('updateGroups', response.data);
+        }).catch(alert);
     },
   },
 });

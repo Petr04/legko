@@ -1,15 +1,13 @@
 <template>
     <div class="containerQue">
         <div class="queBlock">
-            <div class="queTriangel"></div>
-            <img class="triangel" src="../assets/queTriangel.svg" alt="">
-            <img src="@/assets/arrowQuestion.svg" alt="">
+            <!-- <div class="queTriangel"></div> -->
+            <!-- <img class="triangel" src="../assets/queTriangel.svg" alt=""> -->
+            <!-- <img src="@/assets/arrowQuestion.svg" alt=""> -->
             <p>
                 <slot />
             </p>
-            
         </div>
-        
     </div>
 </template>
 
@@ -23,7 +21,6 @@
         background-color: rgba(217, 217, 217, 1);
         padding: 10px 10px 10px 20px;
         width: 85%;
-        float: left;
         display: flex;
         align-items: center;
         border-top-right-radius: 7px;

@@ -56,11 +56,8 @@ body {
 
 .v-main {
   max-width: 450px !important;
-  margin: 20px auto;
-}
-
-.v-main > * {
-  margin: 0 15px;
+  --margin-x: 15px;
+  margin: 20px var(--margin-x);
 }
 
 .v-app-bar-title > * {
@@ -79,8 +76,8 @@ export default {
       menuOpened: true,
     };
   },
-  mounted() { // Заменить на created()?
-    this.$store.dispatch('updateArticles');
+  mounted() {
+    this.$store.dispatch('updateGroups');
   },
   watch: {
     $route(r) {

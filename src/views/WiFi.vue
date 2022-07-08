@@ -5,9 +5,7 @@
       <img src="@/assets/wifi.svg">
       <h2 style="font-weight: 500">Wi-Fi</h2>
     </div>
-    <network-warning
-      v-if="wifiRequired && isPingSuccessful != null && !isPingSuccessful"
-    />
+    <network-warning v-if="wifiRequired" />
     <big-numbers-list
       color="#7a85e5"
     >
@@ -28,10 +26,6 @@
 </template>
 
 <style scoped>
-.wifi-warning {
-  /*background: red;*/
-}
-
 .wifi-container {
   display: flex;
   flex-direction: column;
@@ -44,7 +38,6 @@
 import BigNumbersList from '@/components/BigNumbersList.vue';
 import BigNumbersLi from '@/components/BigNumbersLi.vue';
 import NetworkWarning from '@/components/NetworkWarning.vue';
-import { ping } from '@/lib/network.js';
 
 export default {
   components: {
@@ -54,16 +47,6 @@ export default {
   },
   data: () => ({
     wifiRequired: true, // just for test
-    isPingSuccessful: null,
   }),
-  methods: {
-    updatePingStatus() {
-      ping().then(val => this.isPingSuccessful = val);
-    },
-  },
-  mounted() {
-    this.updatePingStatus();
-    setInterval(this.updatePingStatus, 1000);
-  },
 };
 </script>
