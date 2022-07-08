@@ -57,7 +57,9 @@ body {
 .v-main {
   max-width: 450px !important;
   --margin-x: 15px;
-  margin: 20px var(--margin-x);
+  margin: 20px auto;
+  padding-left: var(--margin-x) !important;
+  padding-right: var(--margin-x) !important;
 }
 
 .v-app-bar-title > * {

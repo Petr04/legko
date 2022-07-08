@@ -20,6 +20,12 @@ img {
   width: 100%;
 }
 
+.big-numbers-li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -29,6 +35,7 @@ img {
 .title {
   display: flex;
   align-items: top;
+  /*margin-bottom: 10px;*/
 }
 
 li {

@@ -15,7 +15,7 @@ const routes = [
   { path: '/index.html', component: MainMenu },
 
   { path: '/group/:id', name: 'group', component: Group },
-  { path: '/article/:id', component: Article },
+  { path: '/article/:id', name: 'article', component: Article },
 ]
 
 const router = new VueRouter({

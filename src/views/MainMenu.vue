@@ -9,21 +9,19 @@
 
     <div class="apps-container">
       <div class="apps">
-        <a
+        <!-- push() instead of <router-link> for sake of params -->
+        <div
           v-for="group in groups"
           :key="group.id"
+          @click="$router.push({
+            name: 'group',
+            params: group,
+          })"
+          class="app"
         >
-          <div
-            @click="$router.push({
-              name: 'group',
-              params: group,
-            })"
-            class="app"
-          >
-            <img :src="'data:image/png;base64, ' + group.icon">
-            <p>{{ group.title }}</p>
-          </div>
-        </a>
+          <img :src="'data:image/png;base64, ' + group.icon">
+          <p>{{ group.title }}</p>
+        </div>
       </div>
     </div>
   </div>

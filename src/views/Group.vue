@@ -13,10 +13,21 @@
 
     <div class="content">
       <h2>Помощь по вопросам</h2>
+      <!-- push() instead of <router-link> for sake of params -->
       <block-question
         v-for="article in articles"
         :key="article.id"
-        style="margin-left: calc(var(--margin-x) * -1)"
+        style="margin-left: calc(var(--margin-x) * -1); color: black"
+        @click.native="$router.push({
+          name: 'article',
+          params: {
+            ...article,
+            wifi: $route.params.wifi,
+            color: $route.params.color,
+            groupTitle: $route.params.title,
+            icon: $route.params.icon,
+          }
+        })"
       >
         {{ article.title }}
       </block-question>
